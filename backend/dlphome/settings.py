@@ -42,10 +42,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'dlphome.urls'
 
+# REACT_INDEX_DIR = BASE_DIR / "staticfiles/frontend\prod"
+# if DEBUG:
+#     REACT_INDEX_DIR = BASE_DIR / "staticfiles/frontend\dev"
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
