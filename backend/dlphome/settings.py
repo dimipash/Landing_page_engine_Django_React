@@ -42,9 +42,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'dlphome.urls'
 
-# REACT_INDEX_DIR = BASE_DIR / "staticfiles/frontend\prod"
-# if DEBUG:
-#     REACT_INDEX_DIR = BASE_DIR / "staticfiles/frontend\dev"
+REACT_INDEX_DIR = BASE_DIR / "staticfiles/frontend\prod"
+if DEBUG:
+    REACT_INDEX_DIR = BASE_DIR / "staticfiles/frontend\dev"
 
 TEMPLATES = [
     {
@@ -57,6 +57,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'dlphome.context_processors.reactjs_assets_paths'
             ],
         },
     },
